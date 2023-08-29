@@ -1,1 +1,0 @@
-Second- In Python 2.1, Unicode literals can only be written using the Latin-1 based encoding “unicode-escape”.
