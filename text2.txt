@@ -1,0 +1,48 @@
+
+...
+Without interpreter line, using plain text:
+# This Python file uses the following encoding: utf-8
+import os, sys
+...
+Text editors might have different ways of defining the file’s encoding, e.g.:
+#!/usr/local/bin/python
+# coding: latin-1
+import os, sys
+...
+Without encoding comment, Python’s parser will assume ASCII text:
+#!/usr/local/bin/python
+import os, sys
+...
+Encoding comments which don’t work:
+Missing “coding:” prefix:
+#!/usr/local/bin/python
+# latin-1
+import os, sys
+...
+Encoding comment not on line 1 or 2:
+#!/usr/local/bin/python
+#
+# -*- coding: latin-1 -*-
+import os, sys
+...
+Unsupported encoding:
+#!/usr/local/bin/python
+# -*- coding: utf-42 -*-
+import os, sys
+...
+Concepts
+The PEP is based on the following concepts which would have to be implemented to enable usage of such a magic comment:
+
+The complete Python source file should use a single encoding. Embedding of differently encoded data is not allowed and will result in a decoding error during compilation of the Python source code.
+Any encoding which allows processing the first two lines in the way indicated above is allowed as source code encoding, this includes ASCII compatible encodings as well as certain multi-byte encodings such as Shift_JIS. It does not include encodings which use two or more bytes for all characters like e.g. UTF-16. The reason for this is to keep the encoding detection algorithm in the tokenizer simple.
+
+Handling of escape sequences should continue to work as it does now, but with all possible source code encodings, that is standard string literals (both 8-bit and Unicode) are subject to escape sequence expansion while raw string literals only expand a very small subset of escape sequences.
+Python’s tokenizer/compiler combo will need to be updated to work as follows:
+read the file
+decode it into Unicode assuming a fixed per-file encoding
+convert it into a UTF-8 byte string
+tokenize the UTF-8 content
+compile it, creating Unicode objects from the given Unicode data and creating string objects from the Unicode literal data by first reencoding the UTF-8 data into 8-bit string data using the given file encoding
+Note that Python identifiers are restricted to the ASCII subset of the encoding, and thus need no further conversion after step 4.
+
+5 16:48:43+00:00 GMT
