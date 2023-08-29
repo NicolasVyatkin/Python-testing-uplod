@@ -1,1 +1,0 @@
-First - This PEP proposes to introduce a syntax to declare the encoding of a Python source file.
