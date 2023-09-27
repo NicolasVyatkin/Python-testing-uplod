@@ -36,11 +36,11 @@ def is_acceptable_password(password: str) -> bool:
 
 print("Example:")
 print(is_acceptable_password("short"))
-#######################################OR######################################
+#######################################OR#############################################
 def is_acceptable_password(password: str) -> bool:    
     return len(password) > 6 and any(i.isdigit() for i in password)
-#######################################OR######################################
+#######################################OR#############################################
 is_acceptable_password = lambda p: len(p)>6 and any([l.isdigit() for l in p])
-#######################################OR######################################
+#######################################OR#############################################
 def is_acceptable_password(password: str) -> bool:
     return len(password) > 6 and any(ch.isdigit() for ch in password)
