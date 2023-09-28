@@ -18,20 +18,25 @@
 # assert is_acceptable_password("muchlonger") == True
 # assert is_acceptable_password("ashort") == False
 
-# How it’s used: For password verification form. Also it's good to learn how the task can be evaluated.
+# How itï¿½s used: For password verification form. Also it's good to learn how the task can be evaluated.
 
-################################################SOLUTION#####################################################
+################################################ SOLUTION#####################################################
+from re import search
+
+
 def is_acceptable_password(password: str) -> bool:
-    cond_one=len(password)>=6
-    cond_two=any(map(str.isdigit, password)) and not password.isdigit()
-    cond_three=len(password)>=9
+    cond_one = len(password) >= 6
+    cond_two = any(map(str.isdigit, password)) and not password.isdigit()
+    cond_three = len(password) >= 9
     cond_four = 'password' not in password and 'PASSWORD' not in password
     return cond_one and (cond_two or cond_three) and cond_four
 
 
 print("Example:")
 print(is_acceptable_password("short"))
-###################################################OR########################################################
+################################################### OR########################################################
+
+
 def is_acceptable_password(password):
     cd = 0
     cnd = 0
@@ -43,14 +48,16 @@ def is_acceptable_password(password):
         else:
             cnd += 1
         if cd > 0 and cnd > 0:
-            break         
-    if len(password) < 9:        
+            break
+    if len(password) < 9:
         return True if len(password) > 6 and cd > 0 and cnd > 0 else False
     else:
         return True
     return None
 
-###################################################OR########################################################
+################################################### OR########################################################
+
+
 def is_acceptable_password(password: str) -> bool:
     if len(password) > 6:
         for x in password:
@@ -59,25 +66,30 @@ def is_acceptable_password(password: str) -> bool:
         return False
     else:
         return False
-###################################################OR########################################################
+################################################### OR########################################################
+
+
 def is_acceptable_password(password: str) -> bool:
     return (len(password) > 6 and any(char.isdigit() for char in password) and not password.isnumeric())
-###################################################OR########################################################
+################################################### OR########################################################
+
+
 def is_acceptable_password(password: str) -> bool:
     return (len(password) > 9 or (len(password) > 6 and any(char.isdigit() for char in password) and not password.isnumeric()))
-###################################################OR########################################################
-from re import search
+
+################################################### OR########################################################
+
+
 def is_acceptable_password(a):
     return \
-    not search(r"password", a.lower())\
-    and\
-    (len(a) > 9 or\
-        (\
-        len(a) > 6\
-        and \
-        any(char.isdigit() for char in a)\
-        and \
-        not a.isnumeric()\
-        )\
-    )
-
+        not search(r"password", a.lower())\
+        and\
+        (len(a) > 9 or
+         (
+            len(a) > 6
+            and
+            any(char.isdigit() for char in a)
+            and
+            not a.isnumeric()
+        )
+        )
