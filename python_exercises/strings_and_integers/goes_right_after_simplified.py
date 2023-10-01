@@ -18,10 +18,7 @@
 # assert goes_after("world", "w", "r") == False
 # assert goes_after("world", "l", "o") == False
 # assert goes_after("list", "l", "o") == False
-# 1
-# 2
-# 3
-# 4
+
 # Preconditions: all symbols are lowercased and unique.
 
 ################################################ SOLUTION#####################################################

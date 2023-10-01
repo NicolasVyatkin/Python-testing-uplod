@@ -25,10 +25,7 @@
 # assert translate("hoooowe yyyooouuu duoooiiine") == "how you doin"
 # assert translate("aaa bo cy da eee fe") == "a b c d e f"
 # assert translate("sooooso aaaaaaaaa") == "sos aaa"
-# 1
-# 2
-# 3
-# 4
+
 # How it is used: This is a similar cipher to those used by children when they invent their own "bird" language.
 # Now you will be ready to crack the code.
 

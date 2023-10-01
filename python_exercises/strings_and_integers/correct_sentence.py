@@ -15,10 +15,7 @@
 # assert correct_sentence("Greetings, friends") == "Greetings, friends."
 # assert correct_sentence("Greetings, friends.") == "Greetings, friends."
 # assert correct_sentence("greetings, friends.") == "Greetings, friends."
-# 1
-# 2
-# 3
-# 4
+
 # Precondition: No leading and trailing spaces, text contains only spaces, a-z, A-Z, "," and ".".
 
 ################################################ SOLUTION#####################################################

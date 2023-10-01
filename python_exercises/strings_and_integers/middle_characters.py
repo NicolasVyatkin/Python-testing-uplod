@@ -15,8 +15,7 @@
 
 # assert middle("example") == "m"
 # assert middle("test") == "es"
-# 1
-# 2
+
 # How it is used: for work with texts.
 
 # Precondition: 1 <= the length of the text <= 100.

@@ -20,10 +20,7 @@
 # assert first_word(" a word ") == "a"
 # assert first_word("don't touch it") == "don't"
 # assert first_word("greetings, friends") == "greetings"
-# 1
-# 2
-# 3
-# 4
+
 # How it is used: the first word is a command in a command line
 
 # Precondition: the text can contain a-z A-Z , . '

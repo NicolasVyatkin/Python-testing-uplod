@@ -15,10 +15,7 @@
 # assert checkio("He is 123 man") == False
 # assert checkio("1 2 3 4") == False
 # assert checkio("bla bla bla bla") == True
-# 1
-# 2
-# 3
-# 4
+
 # How it is used: This teaches you how to work with strings and introduces some useful functions.
 
 # Precondition: The input contains words and/or numbers. There are no mixed words (letters and digits combined).

@@ -18,7 +18,7 @@
 # assert is_acceptable_password("muchlonger") == True
 # assert is_acceptable_password("ashort") == False
 
-# How it�s used: For password verification form. Also it's good to learn how the task can be evaluated.
+# How it's used: For password verification form. Also it's good to learn how the task can be evaluated.
 
 ################################################ SOLUTION#####################################################
 from re import search

@@ -14,10 +14,7 @@
 # assert checkio(999) == 729
 # assert checkio(1000) == 1
 # assert checkio(1111) == 1
-# 1
-# 2
-# 3
-# 4
+
 # How it is used: This task can teach you how to solve a problem with simple data type conversion.
 
 # Precondition:

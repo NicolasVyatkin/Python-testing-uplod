@@ -15,10 +15,7 @@
 # assert checkio(2) == "two"
 # assert checkio(3) == "three"
 # assert checkio(4) == "four"
-# 1
-# 2
-# 3
-# 4
+
 # How it is used: This concept may be useful for the speech synthesis software or automatic reports systems.
 # This system can also be used when writing a chatbot by assigning words or phrases numerical values and having
 # a system retrieve responses based on those values.

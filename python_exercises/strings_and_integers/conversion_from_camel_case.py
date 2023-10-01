@@ -11,8 +11,7 @@
 
 # assert from_camel_case("MyFunctionName") == "my_function_name"
 # assert from_camel_case("IPhone") == "i_phone"
-# 1
-# 2
+
 # How it is used: To apply function names in the style in which they are adopted in a specific
 # language (Python, JavaScript, etc.).
 
