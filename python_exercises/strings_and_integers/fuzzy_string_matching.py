@@ -1,4 +1,4 @@
-﻿# Fuzzy String Matching
+﻿# Fuzzy String Matching - unfinised
 
 # Given two strings and a permissible number of character differences, determine if the strings can be considered
 # approximately equal.
