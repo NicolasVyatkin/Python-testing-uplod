@@ -1,2 +1,1 @@
-
-    return max(a,
+range(1, n)
